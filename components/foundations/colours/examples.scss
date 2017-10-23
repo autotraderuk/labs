@@ -1,0 +1,6 @@
+// example use of the colour function
+
+.element {
+	background-color: at-colour(blue, dark);
+	color: at-colour(white);
+}

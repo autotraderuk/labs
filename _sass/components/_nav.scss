@@ -1,0 +1,36 @@
+.nav {
+	&__item {
+		@media (max-width: 16em) {
+			display: block;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: .5em 0;
+		text-decoration: none;
+
+		@media (min-width: 16em) {
+			padding: 1em;
+		}
+
+		.nav__item--active & {
+			&:focus,
+			&:hover {
+				background: #fff;
+			}
+		}
+	}
+
+	@media (min-width: 30em) {
+		&--primary,
+		&--secondary {
+			flex: 1;
+		}
+	}
+
+	&--tertiary {
+		padding: 2em 0;
+		text-align: center;
+	}
+}

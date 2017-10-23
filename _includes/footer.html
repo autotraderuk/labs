@@ -1,0 +1,22 @@
+			</div>
+		</main>
+
+		<footer class="container" role="contentinfo">
+			<nav role="navigation">
+				<ul class="nav nav--tertiary hlist type-smart">
+				{% for navitem in site.data.config.footernav %}
+					<li class="nav__item hlist__item{% if page.url == navitem.link %} nav__item--active{% endif %}">
+						{% if page.url != navitem.link %}
+						<a href="{{ navitem.link }}" class="nav__link">{{ navitem.title }}</a>
+						{% else %}
+						<span class="nav__link">{{ navitem.title }}</span>
+						{% endif %}
+					</li>
+				{% endfor %}
+				</ul>
+			</nav>
+		</footer>	
+
+	</div>
+</body>
+</html>

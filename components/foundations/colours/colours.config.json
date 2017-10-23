@@ -1,0 +1,170 @@
+{
+  "title": "Colour Palette",
+  "status": "ready",
+  "context": {
+    "colours": [{
+      "title": "Red",
+      "variants": [{
+        "title": "Red (light)",
+        "name": "red--light",
+        "value": "#FFD5D1"
+      },
+      {
+        "title": "Red",
+        "name": "red--base",
+        "value": "#FF4436"
+      },
+      {
+        "title": "Red (dark)",
+        "name": "red--dark",
+        "value": "#FE0600"
+      }]
+    },
+
+    {
+      "title": "Blue",
+      "variants": [{
+        "title": "Blue (light)",
+        "name": "blue--light",
+        "value": "#5D7199"
+      },
+      {
+        "title": "Blue",
+        "name": "blue--base",
+        "value": "#313c53"
+      },
+      {
+        "title": "Blue (dark)",
+        "name": "blue--dark",
+        "value": "#242D3D"
+      }]
+    },
+
+    {
+      "title": "Aqua",
+      "variants": [{
+        "title": "Aqua (light)",
+        "name": "aqua--light",
+        "value": "#86EBE9"
+      },
+      {
+        "title": "Aqua",
+        "name": "aqua--base",
+        "value": "#00D7D2"
+      },
+      {
+        "title": "Aqua (dark)",
+        "name": "aqua--dark",
+        "value": "#06A09D"
+      }]
+    },
+
+    {
+      "title": "Grey",
+      "variants": [{
+        "title": "Grey (light)",
+        "name": "grey--light",
+        "value": "#f7f7f5"
+      },
+      {
+        "title": "Grey",
+        "name": "grey--base",
+        "value": "#e8e8e3"
+      },
+      {
+        "title": "Grey (dark)",
+        "name": "grey--dark",
+        "value": "#d0d0cb"
+      }]
+    },
+
+    {
+      "title": "Yellow",
+      "variants": [{
+        "title": "Yellow (light)",
+        "name": "yellow--light",
+        "value": "#FFEBB6"
+      },
+      {
+        "title": "Yellow",
+        "name": "yellow--base",
+        "value": "#FFC400"
+      },
+      {
+        "title": "Yellow (dark)",
+        "name": "yellow--dark",
+        "value": "#FF9A00"
+      }]
+    },
+
+    {
+      "title": "Green",
+      "variants": [{
+        "title": "Green (light)",
+        "name": "green--light",
+        "value": "#B4EDA0"
+      },
+      {
+        "title": "Green",
+        "name": "green--base",
+        "value": "#7BD500"
+      },
+      {
+        "title": "Green (dark)",
+        "name": "green--dark",
+        "value": "#3F7600"
+      }]
+    },
+
+    {
+      "title": "Social",
+      "variants": [{
+        "title": "Instagram",
+        "name": "social--instagram",
+        "value": "#517FA4"
+      },
+      {
+        "title": "Facebook",
+        "name": "social--facebook",
+        "value": "#3B5998"
+      },
+      {
+        "title": "Google Plus",
+        "name": "social--google-plus",
+        "value": "#DD4B39"
+      },
+      {
+        "title": "Twitter",
+        "name": "social--twitter",
+        "value": "#4099FF"
+      },
+      {
+        "title": "YouTube",
+        "name": "social--youtube",
+        "value": "#B00"
+      }]
+    },
+
+    {
+      "title": "Utility",
+      "variants": [{
+        "title": "White",
+        "name": "white",
+        "value": "#fff"
+      },
+      {
+        "title": "Copy (light)",
+        "name": "copy-light",
+        "value": "#666"
+      },
+      {
+        "title": "Placeholder",
+        "name": "placeholder",
+        "value": "#999"
+      }]
+    }]
+  }
+}
+
+
+

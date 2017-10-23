@@ -1,0 +1,21 @@
+{
+  "label": "Buttons",
+  "collated": true,
+  "default": "red",
+  "variants": [
+  	{
+  		"name": "red",
+  		"context": {
+  			"class": "red",
+  			"title": "Red"
+  		}
+  	},
+  	{
+  		"name": "blue",
+  		"context": {
+  			"class": "blue",
+  			"title": "Blue"
+  		}
+  	}
+  ]
+}

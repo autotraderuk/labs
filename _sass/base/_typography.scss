@@ -1,0 +1,52 @@
+/* TYPOGRAPHY ---------------------------------------- 
+
+- Placeholders: save repeating output
+- Base typography
+- Output classes based on our typography config in settings/typography
+*/
+
+
+
+
+/* PLACEHOLDERS */
+
+%fabriga-regular {
+  font-family: 'Fabriga Regular';
+}
+
+%fabriga-medium {
+  font-family: 'Fabriga Medium';
+}
+
+
+/* BASE TYPOGRAPHY */
+
+body {
+  @extend %fabriga-regular;
+  @include typography($font-base, $font-base, 20);
+}
+
+h1, h2, h3, h4, h5, p, ul, ol, li {
+  margin: 0 0 .3em;
+}
+
+
+/* OUTPUT CLASSES */
+@each $item, $variant in $typography {
+  .#{$font-class-prefix}#{$item} {
+    @if map-has-key($variant, 'family') {
+      @extend %#{map-get($variant, family)};
+    }
+
+    @if mixin-exists(typography) {
+      @include typography($font-base, map-get($variant, size), map-get($variant, line-height));
+    } @else {
+      @warn 'The mixin typography wasn\'t available!';
+    }
+
+    @if map-has-key($variant, 'weight') {
+      font-weight: map-get($variant, weight);
+    }
+  }
+}
+

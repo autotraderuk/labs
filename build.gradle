@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://nexus.atcloud.io/nexus/content/groups/public' }
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("com.moowork.gradle:gradle-node-plugin:1.1.0")
+    }
+}
+
+apply plugin: 'com.moowork.node'
+
+repositories {
+    mavenLocal()
+    maven { url 'http://nexus.atcloud.io/nexus/content/groups/public' }
+    mavenCentral()
+}
+
+node {
+    version = '8.1.2'
+    npmVersion = '5.0.3'
+    distBaseUrl = 'http://nodejs.org/dist'
+    download = true
+    workDir = file("${project.buildDir}/nodejs")
+    nodeModulesDir = file("${project.projectDir}")
+}
+
+npm_publish.dependsOn(npmInstall)
+npm_publish.onlyIf { project.hasProperty('publishing') }

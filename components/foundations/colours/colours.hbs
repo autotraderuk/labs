@@ -1,0 +1,12 @@
+{{#each colours}}
+<h2 class="type-fiesta">{{title}}</h2>
+<div class="swatches">
+	{{#each variants}}
+	<div class="swatch">
+		<p class="colour colour__{{name}}"></p>
+		<p class="type-picanto">{{title}}</p>
+		<p class="type-smart">Hex: {{value}}</p>
+	</div>
+	{{/each}}
+</div>
+{{/each}}

@@ -1,0 +1,12 @@
+/* Horizontal list pattern which acts as a reset for navigation, etc */
+
+.hlist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__item {
+		display: inline-block;
+		margin: 0;
+	}
+}

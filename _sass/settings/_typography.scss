@@ -1,0 +1,66 @@
+$font-base: 16;                                     /* The assumed default for browser font rendering */
+$font-class-prefix: 'type-';                        /* The classes we create for typography _can_ be prefixed if we want */
+$font-weights: 'Medium' 'Regular' !default;         /* What weights of Fabriga do we use? */
+$font-url: 'https://c.atcdn.co.uk/fonts/'; /* URL base for font-face rules */
+$font-name: 'ATFabriga';
+
+
+$typography: (
+  hummer: (
+    family: 'fabriga-regular',
+    size: 78,
+    line-height: 88
+  ),
+
+  discovery: (
+    family: 'fabriga-medium',
+    size: 40,
+    line-height: 48
+  ),
+
+  phantom: (
+    family: 'fabriga-medium',
+    size: 32,
+    line-height: 40
+  ),
+
+  fiesta: (
+    family: 'fabriga-medium',
+    size: 16,
+    line-height: 24
+  ),
+
+  picanto: (
+    family: 'fabriga-regular',
+    size: 14,
+    line-height: 24
+  ),
+
+  smart: (
+    family: 'fabriga-regular',
+    size: 12,
+    line-height: 16
+  ),
+
+  mini: (
+    family: 'fabriga-regular',
+    size: 10,
+    line-height: 16
+  )
+
+) !default;
+
+
+/*
+Loop through the weights of Fabriga so we only write the font-face rule once
+ */
+@each $weight in $font-weights {
+  @font-face {
+    font-family: 'Fabriga #{$weight}';
+    src: url('#{$font-url}#{$font-name}-#{$weight}.eot?v=1.0');
+    src: url('#{$font-url}#{$font-name}-#{$weight}.eot?#iefix&v=1.0') format('embedded-opentype'),
+    url('#{$font-url}#{$font-name}-#{$weight}.woff2') format('woff2'),
+    url('#{$font-url}#{$font-name}-#{$weight}.woff') format('woff'),
+    url('#{$font-url}#{$font-name}-#{$weight}.ttf') format('truetype');
+  }
+}

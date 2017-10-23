@@ -1,0 +1,56 @@
+{
+  "title": "Typography",
+  "collated": true,
+  "default": "hummer",
+  "variants": [
+  	{
+  		"name": "Hummer",
+  		"context": {
+  			"class": "type-hummer",
+  			"title": "Hummer"
+  		}
+  	},
+  	{
+  		"name": "Discovery",
+  		"context": {
+  			"class": "type-discovery",
+  			"title": "Discovery"
+  		}
+  	},
+  	{
+  		"name": "Phantom",
+  		"context": {
+  			"class": "type-phantom",
+  			"title": "Phantom"
+  		}
+  	},
+  	{
+  		"name": "Fiesta",
+  		"context": {
+  			"class": "type-fiesta",
+  			"title": "Fiesta"
+  		}
+  	},
+  	{
+  		"name": "Picanto",
+  		"context": {
+  			"class": "type-picanto",
+  			"name": "Picanto"
+  		}
+  	},
+  	{
+  		"name": "Smart",
+  		"context": {
+  			"class": "type-smart",
+  			"title": "Smart"
+  		}
+  	},
+  	{
+  		"name": "Mini",
+  		"context": {
+  			"class": "type-mini",
+  			"title": "Mini"
+  		}
+  	}
+  ]
+}

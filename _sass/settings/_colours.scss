@@ -1,0 +1,55 @@
+/* COLOURS ---------------------------------------- */
+
+$palette: (
+
+  red: (
+    light: #FFD5D1,
+    base: #FF4436,
+    dark: #FE0600
+  ),
+
+  blue: (
+    light: #5D7199,
+    base: #313c53,
+    dark: #242D3D
+  ),
+
+  aqua: (
+    light: #86EBE9,
+    base: #00D7D2,
+    dark: #06A09D
+  ),
+
+  grey: (
+    light: #f7f7f5,
+    base: #e8e8e3,
+    dark: #d0d0cb
+  ),
+
+  yellow: (
+    light: #FFEBB6,
+    base: #FFC400,
+    dark: #FF9A00
+  ),
+
+  green: (
+    light: #B4EDA0,
+    base: #7BD500,
+    dark: #3F7600
+  ),
+
+  social: (
+    instagram: #517FA4,
+    facebook: #3B5998,
+    google-plus: #DD4B39,
+    twitter: #4099FF,
+    youtube: #B00
+  ),
+
+  white: #fff,
+  copy-light: #666,
+  placeholder: #999
+
+) !default;
+
+

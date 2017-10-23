@@ -1,0 +1,38 @@
+{
+  "name": "at-style-core",
+  "version": "0.0.3",
+  "description": "AutoTrader Core",
+  "author": "AutoTrader Devs",
+  "license": "MIT",
+  "homepage": "https://github.atcloud.io/AutoTrader/at-style-core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.atcloud.io/AutoTrader/at-style-core"
+  },
+  "bugs": "https://github.atcloud.io/AutoTrader/at-style-core/issues",
+  "publishConfig": {
+    "registry": "https://nexus.atcloud.io/nexus/content/repositories/npm-internal/"
+  },
+  "scripts": {
+    "lint": "sass-lint sass/**/*.scss -v -q -i 'sass/tests/**/*.scss, sass/generic/_reset.scss'",
+    "sass": "node-sass sass/core.scss -o css --output-style compressed --source-map true",
+    "styleguide": "node-sass sass/preview.scss -o css --output-style compressed && node-sass sass/styleguide.scss -o css --output-style compressed && fractal start -s",
+    "css": "npm run lint -s && npm run sass && npm run styleguide",
+    "watch": "npm run sass -- -w & fractal start --sync",
+    "version:patch": "npm version patch -m \"#publish %s a new patch version\"",
+    "version:minor": "npm version minor -m \"#publish %s a new minor version\"",
+    "version:major": "npm version major -m \"#publish %s a new major version\"",
+    "published-version": "npm view at-style-core version --registry https://nexus.atcloud.io/nexus/content/repositories/npm-internal/",
+    "publish-diff": "publish-diff --registry https://nexus.atcloud.io/nexus/content/repositories/npm-internal/"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@frctl/fractal": "^1.0",
+    "node-sass": "^4.5.3",
+    "publish-diff": "^0.4.0",
+    "sass-lint": "^1.12.0",
+    "sass-true": "^3.0.1"
+  },
+  "peerDependencies": {},
+  "keywords": []
+}

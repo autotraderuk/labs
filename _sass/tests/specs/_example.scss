@@ -1,0 +1,5 @@
+@include describe('Colours [function]') {
+  @include it('gets light red from the Sass map $palette') {
+  	@include assert-equal(at-colour(red, light), map-get(map-get($palette, red), light), 'TEST');
+  }
+}

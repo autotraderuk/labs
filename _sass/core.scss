@@ -1,0 +1,34 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@charset "utf-8";
+
+/*
+ITCSS
+-----
+
+Settings: Global variables, config switches.
+Tools: Default mixins and functions.
+Generic: Ground-zero styles (Normalize.css, resets, box-sizing).
+Base: Unclassed HTML elements (type selectors).
+Objects: Cosmetic-free design patterns.
+Components: Designed components, chunks of UI.
+(optional Theme layer)
+Trumps: Helpers and overrides.
+ */
+
+@import 'settings/global-vars', 'settings/colours', 'settings/typography';
+
+@import 'tools/helpers';
+
+@import 'generic/reset';
+
+@import 'base/typography';
+
+@import 'objects/buttons', 'objects/lists';
+
+@import 'components/footer', 'components/header', 'components/nav';
+
+@import 'trumps/helpers';
+

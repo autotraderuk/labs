@@ -1,0 +1,18 @@
+$grid-base-unit: 8px;
+
+/*
+Breakpoints
+
+Suggestion:
+- We don't need many common breakpoints for everything, only align when it makes sense to
+- There's no value in aligning to a device measure, break when the content needs us to
+- Using variables for a single min-width precludes us from using ranges (eg min-width:10em and max-width:30em), which can help contrain change rather than allowing it to cascade
+- Us the inbuilt @media call rather than a mixin that doesn't give us flexibility
+ */
+
+
+/* For limited areas of alignment, a list might make sense. Downside is that this list will change and if we refer to its position in the array and want to keep them organised and readable, this falls down */
+$breakpoints: 10em 20em 30em 44em 60em 72em;
+/*
+Plus-side: there's little value in aligning loads of change to a single breakpoint just because a fixed design was done this way. We perhaps shouldn't need many vars/list items at all
+ */

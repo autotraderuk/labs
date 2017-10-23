@@ -1,0 +1,68 @@
+/*
+ITCSS
+-----
+
+Settings: Global variables, config switches.
+Tools: Default mixins and functions.
+Generic: Ground-zero styles (Normalize.css, resets, box-sizing).
+Base: Unclassed HTML elements (type selectors).
+Objects: Cosmetic-free design patterns.
+Components: Designed components, chunks of UI.
+(optional Theme layer)
+Trumps: Helpers and overrides.
+ */
+
+@import "settings/global-vars", "settings/colours", "settings/typography";
+
+@import "tools/helpers";
+
+@import "generic/reset", "generic/helpers";
+
+
+body {
+	padding: 1em;
+}
+
+.swatches{
+	display:flex;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.swatch {
+	border: 1px solid #dfdfdf;
+	border-radius: 4px;
+	flex: 1;
+	margin: 0 1em 0 0;
+	max-width: 7em;
+	padding: 4px;
+}
+
+.colour {
+	border: 1px solid #eee;
+	border-radius:4px;
+	max-width: 10em;
+
+	&::before{
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	@each $colour, $properties in $palette {
+		@if type-of($properties) == color {
+			&__#{$colour} {
+				background-color: at-colour($colour);
+			}
+		} @else {
+			@each $variant, $value in $properties {
+				&__#{$colour}--#{$variant} {
+					background-color: at-colour($colour, $variant);
+				}
+			}
+		}
+	}
+}
+
+
+

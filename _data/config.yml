@@ -1,0 +1,30 @@
+nav:
+  - title: Products
+    link: /products/
+
+  - title: Packages
+    link: /packages/
+
+  - title: Great Guides
+    link: /guides/
+
+  - title: Events
+    link: /events/
+
+  - title: Insights & News
+    link: /news/
+
+secondarynav:
+  - title: Contact
+    link: /contact/
+
+  - title: Portal login
+    link: /portal/
+
+footernav:
+  - title: Main Website
+    link: http://autotrader.co.uk 
+
+  - title: Engineering Blog
+    link: http://engineering.autotrader.co.uk
+

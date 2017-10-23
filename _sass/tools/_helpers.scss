@@ -1,0 +1,137 @@
+/*
+ * HELPERS
+ * - Mixins
+ * - Functions
+ * - Placeholdersa / Extends
+ */
+
+
+
+
+/*
+ * MIXINS
+ */
+
+
+/*
+Pass in the base font size (which if nested is the parent size), px measures for font size and line-height
+@return font-size in ems & unitless line-height
+*/
+@mixin typography ($base-size, $this-size, $line-height) {
+  @if ($base-size != $this-size) {
+    font-size: ($this-size / $base-size) * 1em;
+  }
+  line-height: ($line-height / $this-size);
+}
+
+
+/*
+Use setratio within a :before pseudo-selector, t helps preserve a ratio on a flexible element.
+The contents will need to be positioned absolutely within it.
+
+// to make a square
+.element {
+  &:before {
+    @include setratio(1 1);
+  }
+}
+
+// widescreen ratio
+.element {
+  &:before {
+    @include setratio(16 9);
+  }
+}
+
+*/
+@mixin setratio ($ratio: 1 1) {
+  @if length($ratio) < 2 or length($ratio) > 2 {
+    @warn '$ratio must be a list with two values.';
+  }
+
+  content: '';
+  display: block;
+  padding-top: percentage(nth($ratio, 2) / nth($ratio, 1));
+}
+
+
+
+
+
+
+/*
+ * FUNCTIONS
+ */
+
+
+/*
+Function to intercept the colour, enabling us to keep simple config but
+also open us up to doing more in future with colours without having to
+mess with variables
+
+used like:
+  .test-class {
+    background-color: at-colour(red, dark);
+    color: at-colour(white);
+  }
+
+for output like: 
+
+  .test-class{background-color:#FE0600;color:#fff}
+
+*/
+@function at-colour($colour, $variant: null) {
+  @if not map-has-key($palette, $colour) {
+    @warn 'The colour \'#{$colour}\' is not in the palette';
+    @return null;
+  }
+
+  @if type-of(map-get($palette, $colour)) == color {
+    @return map-get($palette, $colour);
+  } @else {
+    @if ($variant == null) {
+      $variant: base;
+    }
+    @return map-get(map-get($palette, $colour), $variant);
+  }
+}
+
+
+
+
+/*
+ * PLACEHOLDERS / EXTENDS
+ */
+
+
+// Use sparingly, just for deunioning layers to improve performance in most cases
+// It triggers the GPU to split out the element which is to be position:fixed or animated so it redraws less on the screen
+%gpu-accelerate {
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+}
+
+%light-branding {
+  background-color: at-colour(white);
+  color: at-colour(copy-light);
+}
+
+
+%dark-branding {
+  background-color: at-colour(blue);
+  color: at-colour(white);
+
+  a {
+    &:link,
+    &:visited {
+      color: at-colour(aqua, light);
+    }
+
+    &:hover,
+    &:active {
+      color: at-colour(aqua, dark);
+    }
+  }
+}
+

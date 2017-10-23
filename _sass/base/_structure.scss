@@ -1,0 +1,20 @@
+body {
+	@extend %dark-branding;
+}
+
+
+.container {
+	margin: 0 auto;
+	max-width: 60em;
+	position: relative;
+
+	@media (max-width: 62em) {
+		padding: 0 1em;
+	}
+}
+
+[role="main"] {
+	@extend %light-branding;
+	padding: 3em 0;
+	text-align: center;
+}

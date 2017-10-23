@@ -1,0 +1,73 @@
+/*
+ITCSS
+-----
+
+Settings: Global variables, config switches.
+Tools: Default mixins and functions.
+Generic: Ground-zero styles (Normalize.css, resets, box-sizing).
+Base: Unclassed HTML elements (type selectors).
+Objects: Cosmetic-free design patterns.
+Components: Designed components, chunks of UI.
+(optional Theme layer)
+Trumps: Helpers and overrides.
+ */
+
+@import "settings/global-vars", "settings/colours", "settings/typography";
+
+@import "tools/helpers";
+
+@import "generic/reset", "generic/helpers";
+
+
+// header section
+.Header {
+	background-color: at-colour(blue);
+	padding: 1em 0;
+}
+
+
+// Nav/sidebar
+.Frame-panel--sidebar {
+	background-color: at-colour(blue);
+}
+
+.Tree-title {
+	color: at-colour(white);
+}
+
+.Tree-collectionLabel span {
+	&::before {
+		background-image: none;
+		content: "\203A";
+		height: auto;
+		opacity: 1;
+		padding-left: .4em;
+		top: -.2em;
+		transform: rotate(90deg);
+		width: auto;
+
+		.Tree-collection.is-closed & {
+			padding-left: .2em;
+			top: -.1em;
+			transform: none;
+		}
+	}
+
+	color: at-colour(grey);
+}
+
+
+
+.Tree-entityLink {
+	color: at-colour(aqua, light);
+}
+
+
+
+// Preview/Notes area
+.Pen-previewLink {
+	color: #313c53
+}
+
+
+
